@@ -1,0 +1,9 @@
+The following CSS rule is intended to style all list items with a red background color:
+
+```css
+li {
+  background-color: red;
+}
+```
+
+However, if a list item is nested inside another list item (e.g., an ordered list within an unordered list), the nested list item might not inherit the red background color.  This is an uncommon error because it involves the interaction of inheritance and specificity in CSS.
