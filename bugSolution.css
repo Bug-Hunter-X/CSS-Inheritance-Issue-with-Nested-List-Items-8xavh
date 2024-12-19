@@ -1,0 +1,25 @@
+To solve this problem, we can use more specific selectors or the `!important` flag (use with caution).  Here are two solutions:
+
+**Solution 1: Using a more specific selector**
+
+This approach targets all list items regardless of nesting:
+
+```css
+li, li li {
+  background-color: red;
+}
+```
+
+This ensures that both parent and child list items are targeted. You can add more `li li li` etc to catch deeper nesting, but it is not an ideal solution for deeply nested lists.  For a more maintainable solution, see below.
+
+**Solution 2: Using the `!important` flag (use with caution):**
+
+This solution forces the `background-color` to override any other conflicting styles:
+
+```css
+li {
+  background-color: red !important;
+}
+```
+
+While this works, overuse of `!important` can make your CSS harder to maintain and debug in the long run. The first solution is generally preferred.
